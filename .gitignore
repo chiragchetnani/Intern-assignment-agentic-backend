@@ -1,10 +1,50 @@
+# ----------------------------------------------------------------------
+# Environments
+# ----------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+venv/
+env/
+ENV/
+legal-ai/
+
+# ----------------------------------------------------------------------
+# Logs, Outputs, and Temporary Data
+# ----------------------------------------------------------------------
+*.log
+api_output.json
+diag_output.json
+*_output.json
+temp_output*/
+
+# ----------------------------------------------------------------------
+# Vector Databases & Data Storage
+# ----------------------------------------------------------------------
+qdrant_local/
+qdrant_storage/
+temp_judgments/
+
+# ----------------------------------------------------------------------
+# Documentation Exclusions
+# ----------------------------------------------------------------------
+workflow.md
+
+# ----------------------------------------------------------------------
+# Agent/AI Artifacts
+# ----------------------------------------------------------------------
+.gemini/
+.agent/
+!.agent/workflows/
+
+# ----------------------------------------------------------------------
 # Python
+# ----------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -17,33 +57,55 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual Environment
-venv/
-ENV/
-legal-ai/
+# Unit tests / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
 
-# Environment Variables (Secrets)
-.env
-.env.*
-!.env.example
-
-# IDEs
+# ----------------------------------------------------------------------
+# IDEs and Editors
+# ----------------------------------------------------------------------
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# OS
+# ----------------------------------------------------------------------
+# OS / System Files
+# ----------------------------------------------------------------------
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Model files (in case you train locally later)
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.onnx
 
-# Agent/AI Artifacts
-.gemini/
-.agent/
-!.agent/workflows/
-test_results.log
+# Local DB
+*.db
+*.sqlite3
 
-# Database
-qdrant_local/
+# Temp files
+*.tmp
+*.temp

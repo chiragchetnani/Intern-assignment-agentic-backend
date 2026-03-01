@@ -168,9 +168,6 @@ class MCPOrchestrator:
         RULES:
         - For EVERY query, you MUST use BOTH tools to provide a "triangulated" answer (Statute + Case Law + Latest Updates).
         - Use search_legal_database FIRST, then live_web_search.
-        - DO NOT merge function names with arguments. Correct: name: "tool", args: {"q": "..."}.
-        - DO NOT provide any text commentary when calling a tool.
-        - DO NOT use XML tags like <function> or <call> unless specifically instructed.
         - Stop once you have gathered sufficient evidence from all sources.
         """
         else:
